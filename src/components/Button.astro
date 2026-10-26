@@ -1,0 +1,18 @@
+---
+const title = Astro.props.title
+---
+
+<button class="btn"> <slot/> </button>
+
+<style>
+	.btn {
+		background-color: #4f4f4f;
+		color: white;
+		padding: 10px 20px;
+		border-radius: 8px;
+
+	}
+	.btn:hover {
+		background-color: darkseagreen;
+	}
+</style>

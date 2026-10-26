@@ -1,0 +1,26 @@
+---
+titulo: "Web de consulta de tiempo"
+autor: "Marcos"
+fecha: "2026-10-19"
+imagen: "https://images.seeklogo.com/logo-png/39/2/eltiempo-es-logo-png_seeklogo-397451.png"
+tags: ["tiempo", "web"]
+---
+
+import TarjetaProyecto from "../../components/TarjetaProyecto.jsx";
+import Valoracion from "../../components/Valoracion.jsx";
+
+<TarjetaProyecto
+  titulo="Web para consultar el tiempo"
+  autor="Marcos"
+  fecha="2026-10-19"
+  tags={["tiempo", "web"]}
+  descripcion="Esto es una web para poder consultar el tiempo en la zona específica donde lo deseas saber."
+  enlace="https://www.eltiempo.es/"
+  textoEnlace="Consultar"
+  imagenes={[
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU9WW34sFMzIKBtGmMdwQHSkL3QAvR3SkWAxrO0DZFodClH6YJUmKuam0t&s=10",
+    "https://img.microsiervos.com/images2016/Ventusky.jpg",
+  ]}
+>
+  <Valoracion client:load />
+</TarjetaProyecto>

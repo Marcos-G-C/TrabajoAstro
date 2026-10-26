@@ -1,0 +1,25 @@
+---
+titulo: "App de venta de articulos"
+autor: "Marcos"
+fecha: "2026-10-19"
+imagen: "https://images.seeklogo.com/logo-png/41/2/pc-componentes-logo-png_seeklogo-412332.png"
+tags: ["movil", "tiempo", "android"]
+---
+
+import TarjetaProyecto from "../../components/TarjetaProyecto.jsx";
+import Valoracion from "../../components/Valoracion.jsx";
+
+<TarjetaProyecto
+  titulo="PcComponentes, tu app de electronica"
+  autor="Marcos"
+  fecha="2026-10-19"
+  tags={["movil", "tiempo", "android"]}
+  descripcion="PcComponentes es una app/web de electronica donde puedes comprar toda clase de articulos de informática: ratones, teclados, monitores, portatiles, pcs, tarjetas graficas, procesadores, HDMI, USB, etc."
+  enlace="https://www.pccomponentes.com/"
+  imagenes={[
+    "https://storage.comprasmartphone.com/stores/pccomponentes.png",
+    "https://marketing4ecommerce.net/wp-content/uploads/2023/05/Copia-de-PLANTILLA-PORTADA-750X450-2023-05-09T100434.486.jpg",
+  ]}
+>
+  <Valoracion client:load />
+</TarjetaProyecto>

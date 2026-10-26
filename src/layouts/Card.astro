@@ -1,0 +1,80 @@
+---
+import Menu from "../components/Menu.astro";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Card</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    /* Estilo del contenedor de la tarjeta */
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 320px;
+      border: 1px solid #e0e0e0;
+    }
+
+    /* Cabecera: Imagen a la izquierda, título a la derecha */
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .top img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .top h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    /* Texto inferior que ocupa todo el ancho */
+    .middle {
+      text-align: left;
+    }
+
+    .middle p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="top">
+      <img src="https://img.magnific.com/vector-premium/icono-perfil-avatar-predeterminado-imagen-usuario-redes-sociales-icono-avatar-gris-silueta-perfil-blanco-ilustracion-vectorial_561158-3407.jpg?semt=ais_hybrid&w=740&q=80" alt="Logo">
+      <h1>Título Principal</h1>
+    </div>
+
+    <div class="middle">
+      <p>Este es el texto del medio del cuadrado que se extiende por debajo de la imagen y del título.</p>
+    </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    background-color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    color: brown;
+}

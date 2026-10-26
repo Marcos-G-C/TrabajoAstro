@@ -1,0 +1,64 @@
+
+---
+interface Props {
+  titulo: string;
+  contenido: string;
+  foto: string;
+  alt?: string;
+}
+
+const {
+  titulo,
+  contenido,
+  foto,
+  alt = "Imagen de la tarjeta"
+} = Astro.props;
+---
+
+<div class="card">
+  <div class="card-header">
+    <img src={foto} alt={alt} class="card-img" />
+    <h2>{titulo}</h2>
+  </div>
+
+  <p>{contenido}</p>
+</div>
+
+<style>
+  .card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 320px;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #222;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+    color: #555;
+  }
+</style>

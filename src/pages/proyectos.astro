@@ -1,0 +1,55 @@
+
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// SSG static site generating
+const proyectos = await getCollection('proyectos');
+---
+
+<BaseLayout>
+    <h1>Lista de todos mis proyectos</h1>
+
+    <ul class="lista-proyectos">
+        {proyectos.map(post => (
+            <li>
+                <a href={'/proyectos/' + post.id}>
+                    {post.data.imagen && (
+                        <img
+                            src={post.data.imagen}
+                            alt=""
+                            class="imagen-proyecto"
+                        />
+                    )}
+                    <span>{post.data.titulo}</span>
+                </a>
+            </li>
+        ))}
+    </ul>
+</BaseLayout>
+
+<style>
+    .lista-proyectos {
+        list-style: none;
+        padding: 0;
+    }
+
+    .lista-proyectos li {
+        margin-bottom: 12px;
+    }
+
+    .lista-proyectos a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    .imagen-proyecto {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 6px;
+        flex-shrink: 0;
+    }
+</style>
