@@ -15,6 +15,7 @@ export default defineConfig({
 
   integrations: [react(), mdx()],
   adapter: vercel(),
+  output: "static",
 
   vite: {
     plugins: [tailwindcss()]

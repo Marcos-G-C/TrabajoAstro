@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const res = await fetch("https://rickandmortyapi.com/api/character");
+const datos = await res.json();
+
+const personajes = datos.results;
+---
+
+<BaseLayout>
+    <h1>Personajes de Rick y Morty</h1>
+    <p>Marcos González Chamorro</p>
+
+    <div class="personajes">
+        {personajes.map(personaje => (
+            <article class="card">
+                <img src={personaje.image} />
+                <h2>{personaje.name}</h2>
+            </article>
+        ))}
+    </div>
+</BaseLayout>
+
+<style>
+    .personajes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+</style>
