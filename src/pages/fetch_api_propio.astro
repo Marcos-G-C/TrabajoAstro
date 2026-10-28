@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const res = await fetch(new URL("/api/hora", Astro.url))
-const datos = await res.json()
+const lafecha = new Date().toLocaleString("es-ES", {
+    timeZone: "Europe/Madrid"
+});
 ---
 
 <BaseLayout>
-    <h1>Hora obtenida usando una api propia</h1>
-    <p>La fecha es: {datos.lafecha}</p>
+    <h1>Hora obtenida usando una API propia</h1>
+    <p>La fecha es: {lafecha}</p>
 </BaseLayout>
